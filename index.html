@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OAuth Redirect Handler</title>
+</head>
+<body>
+    <h2>OAuth Redirect Handler</h2>
+    <p>Please check the console for the OAuth code.</p>
+    <script>
+        // Parse the URL query to find the "code" parameter
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const code = urlParams.get('code');
+
+        // Log the code to the browser's console
+        console.log("OAuth Code:", code);
+
+        // Optionally, display the code on the page
+        document.body.append(`OAuth Code: ${code}`);
+    </script>
+</body>
+</html>
